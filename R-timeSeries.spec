@@ -1,28 +1,25 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  timeSeries
 %global rlibdir  %{_datadir}/R/library
 
 Name:             R-%{packname}
 Version:          2130.92
-Release:          1
+Release:          2
 Summary:          Rmetrics - Financial Time Series Objects
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 BuildArch:        noarch
-Requires:         R-core
-Requires:         R-graphics R-grDevices R-methods R-stats R-utils R-timeDate 
-%if %{with bootstrap}
-Requires:         R-RUnit 
-%else
-Requires:         R-robustbase R-RUnit 
+Requires:         R-core R-graphics R-grDevices R-methods R-stats R-utils
+Requires:         R-timeDate R-RUnit
+%if %{without bootstrap}
+Requires:         R-robustbase
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-graphics R-grDevices R-methods R-stats R-utils R-timeDate
-%if %{with bootstrap}
-BuildRequires:    R-RUnit 
-%else
-BuildRequires:    R-robustbase R-RUnit 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-graphics
+BuildRequires:    R-grDevices R-methods R-stats R-utils R-timeDate R-RUnit
+%if %{without bootstrap}
+BuildRequires:    R-robustbase
 %endif
 
 %description

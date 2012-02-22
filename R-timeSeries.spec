@@ -11,13 +11,15 @@ License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 BuildArch:        noarch
-Requires:         R-core R-graphics R-grDevices R-methods R-stats R-utils
+Requires:         R-core
+Requires:         R-graphics R-grDevices R-methods R-stats R-utils
 Requires:         R-timeDate R-RUnit
 %if %{without bootstrap}
 Requires:         R-robustbase
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-graphics
-BuildRequires:    R-grDevices R-methods R-stats R-utils R-timeDate R-RUnit
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-graphics R-grDevices R-methods R-stats R-utils
+BuildRequires:    R-timeDate R-RUnit
 %if %{without bootstrap}
 BuildRequires:    R-robustbase
 %endif

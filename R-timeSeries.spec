@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          2130.92
-Release:          2
+Release:          3
 Summary:          Rmetrics - Financial Time Series Objects
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)

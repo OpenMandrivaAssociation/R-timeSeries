@@ -3,13 +3,13 @@
 %global rlibdir  %{_datadir}/R/library
 
 Name:             R-%{packname}
-Version:          2130.92
-Release:          3
+Version:          3010.97
+Release:          1
 Summary:          Rmetrics - Financial Time Series Objects
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/timeSeries_3010.97.tar.gz
 BuildArch:        noarch
 Requires:         R-core
 Requires:         R-graphics R-grDevices R-methods R-stats R-utils
@@ -58,3 +58,4 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/unitTests
+
